@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Increase count
+    </title>
+</head>
+<body>
+    <button id="btn1">0</button> 
+    <button id="btn2">0</button>
+    <button id="btn3">0</button>
+    <script>
+        let count1 = 0;
+        let count2 = 0;
+        let count3 = 0;
+
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+
+        btn1.addEventListener("click", function() {
+            count1++;
+            btn1.textContent = count1;
+        });
+
+        btn2.addEventListener("click", function() {
+            count2++;
+            btn2.textContent = count2;
+        });
+
+        btn3.addEventListener("click", function() {
+            count3++;
+            btn3.textContent = count3;
+        });
+    </script>
+</body>
+</html>

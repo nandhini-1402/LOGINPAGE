@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Number OTP Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dbackgrounds&psig=AOvVaw3-UiG3H1qA9o-Evsf0LdjL&ust=1709197799060000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLCOjJLYzYQDFQAAAAAdAAAAABAE);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #login-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        width: 100%;
+        text-align: center;
+    }
+    input[type="text"], input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login with Mobile Number</h2>
+        <input type="text" id="mobile-number" placeholder="Enter Mobile Number">
+        <button onclick="sendOTP()">Get OTP</button>
+        <input type="text" id="otp" placeholder="Enter OTP">
+        <button onclick="verifyOTP()">Verify OTP</button>
+    </div>
+
+<script>
+    function verifyOTP() {
+        var otp = document.getElementById("otp").value;
+        if (otp === "1234") {
+            window.location.href = "https://www.mkce.ac.in/";
+        } else {
+            alert("Invalid OTP. Please try again."); 
+        }
+    }
+</script>
+</body>
+</html>
